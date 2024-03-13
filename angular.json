@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "projects": {
+    "auth-data-access": "libs/auth/data-access",
+    "auth-feature": "libs/auth/feature",
+    "cart": "libs/cart",
+    "cart-data-access": "libs/cart/data-access",
+    "home": "libs/home",
+    "home-data-access": "libs/home/data-access",
+    "osf": "apps/osf",
+    "osf-e2e": "apps/osf-e2e",
+    "product": "libs/product",
+    "product-data-access": "libs/product/data-access",
+    "shared-layout": "libs/shared/layout",
+    "shared-ui-shared": "libs/shared/ui-shared"
+  }
+}

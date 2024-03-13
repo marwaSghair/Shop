@@ -1,0 +1,34 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@osf-front/auth": ["libs/auth/src/index.ts"],
+      "@osf-front/auth/data-access": ["libs/auth/data-access/src/index.ts"],
+      "@osf-front/auth/feature": ["libs/auth/feature/src/index.ts"],
+      "@osf-front/cart": ["libs/cart/src/index.ts"],
+      "@osf-front/cart/data-access": ["libs/cart/data-access/src/index.ts"],
+      "@osf-front/home": ["libs/home/src/index.ts"],
+      "@osf-front/home/data-access": ["libs/home/data-access/src/index.ts"],
+      "@osf-front/libs/product": ["libs/libs/product/src/index.ts"],
+      "@osf-front/product/data-access": [
+        "libs/product/data-access/src/index.ts"
+      ],
+      "@osf-front/shared/layout": ["libs/shared/layout/src/index.ts"],
+      "@osf-front/shared/ui-shared": ["libs/shared/ui-shared/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

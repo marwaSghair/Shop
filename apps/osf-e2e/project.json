@@ -1,0 +1,27 @@
+{
+  "sourceRoot": "apps/osf-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/osf-e2e/cypress.json",
+        "devServerTarget": "osf:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "osf:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/osf-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["osf"]
+}

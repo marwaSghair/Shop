@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/auth/feature/src",
+  "prefix": "osf-front",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/auth/feature"],
+      "options": {
+        "jestConfig": "libs/auth/feature/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/feature/src/**/*.ts",
+          "libs/auth/feature/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

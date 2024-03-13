@@ -1,0 +1,146 @@
+<!-- Header-->
+<header class="bg-black py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Checkout</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Shop / Checkout</p>
+        </div>
+    </div>
+  </header>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <!-- BILLING ADDRESS-->
+        <h2 class="fw-bolder text-uppercase mb-4">Billing details</h2>
+    <div class="row">
+      <div class="col-lg-8">
+        <form action="#">
+          <div class="row gy-3">
+            <div class="col-lg-6">
+              <label class="form-label text-sm text-uppercase">First name </label>
+              <input class="form-control" type="text" id="firstName" placeholder="Enter your first name">
+            </div>
+            <div class="col-lg-6">
+              <label class="form-label text-sm text-uppercase">Last name </label>
+              <input class="form-control" type="text" placeholder="Enter your last name">
+            </div>
+            <div class="col-lg-6">
+              <label class="form-label text-sm text-uppercase">Email address </label>
+              <input class="form-control" type="email" placeholder="e.g. Jason@example.com">
+            </div>
+            <div class="col-lg-6">
+              <label class="form-label text-sm text-uppercase">Phone number </label>
+              <input class="form-control" type="tel" placeholder="e.g. +02 245354745">
+            </div>
+            <div class="col-lg-6">
+              <label class="form-label text-sm text-uppercase">Company name (optional) </label>
+              <input class="form-control" type="text" placeholder="Your company name">
+            </div>
+            <div class="col-lg-6 form-group">
+              <label class="form-label text-sm text-uppercase">Country</label>
+              <select class="form-control form-select">
+                <option value>Choose your country</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-lg-12">
+              <label class="form-label text-sm text-uppercase">Address line 1 </label>
+              <input class="form-control" type="text" placeholder="House number and street name">
+            </div>
+            <div class="col-lg-12">
+              <label class="form-label text-sm text-uppercase">Address line 2 </label>
+              <input class="form-control" type="text" placeholder="Apartment, Suite, Unit, etc (optional)">
+            </div>
+            <div class="col-lg-6">
+              <label class="form-label text-sm text-uppercase">Town/City </label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="col-lg-6">
+              <label class="form-label text-sm text-uppercase">State/County </label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="col-lg-6">
+              <button class="btn btn-link text-dark p-0 shadow-0" type="button" data-bs-toggle="collapse" data-bs-target="#alternateAddress">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox">
+                  <label class="form-check-label">Alternate billing address</label>
+                </div>
+              </button>
+            </div>
+            <div class="collapse" id="alternateAddress">
+              <div class="row gy-3">
+                <div class="col-12 mt-4">
+                  <h2 class="h4 text-uppercase mb-4">Alternative billing details</h2>
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm text-uppercase">First name </label>
+                  <input class="form-control" type="text"placeholder="Enter your first name">
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm text-uppercase">Last name </label>
+                  <input class="form-control" type="text" placeholder="Enter your last name">
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm text-uppercase">Email address </label>
+                  <input class="form-control" type="email" placeholder="e.g. Jason@example.com">
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm text-uppercase">Phone number </label>
+                  <input class="form-control" type="tel" placeholder="e.g. +02 245354745">
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm text-uppercase">Company name (optional) </label>
+                  <input class="form-control" type="text" placeholder="Your company name">
+                </div>
+                <div class="col-lg-6 form-group">
+                  <label class="form-label text-sm text-uppercase">Country</label>
+                  <select class="form-control form-select">
+                    <option value>Choose your country</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-lg-12">
+                  <label class="form-label text-sm text-uppercase">Address line 1 </label>
+                  <input class="form-control" type="text" placeholder="House number and street name">
+                </div>
+                <div class="col-lg-12">
+                  <label class="form-label text-sm text-uppercase">Address line 2 </label>
+                  <input class="form-control" type="text" placeholder="Apartment, Suite, Unit, etc (optional)">
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm text-uppercase">Town/City </label>
+                  <input class="form-control" type="text">
+                </div>
+                <div class="col-lg-6">
+                  <label class="form-label text-sm text-uppercase">State/County </label>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 form-group">
+              <button class="btn btn-dark" type="submit">Place order</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- ORDER SUMMARY-->
+      <div class="col-lg-4">
+        <div class="card border-0 rounded-0 p-lg-4 bg-light">
+          <div class="card-body">
+            <h5 class="text-uppercase mb-4">Your order</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-center justify-content-between"><strong class="small fw-bold">Red digital smartwatch</strong><span class="text-muted small">€250</span></li>
+              <li class="border-bottom my-2"></li>
+              <li class="d-flex align-items-center justify-content-between"><strong class="small fw-bold">Gray Nike running shoes</strong><span class="text-muted small">€351</span></li>
+              <li class="border-bottom my-2"></li>
+              <li class="d-flex align-items-center justify-content-between"><strong class="text-uppercase small fw-bold">Total</strong><span>€601</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </section>

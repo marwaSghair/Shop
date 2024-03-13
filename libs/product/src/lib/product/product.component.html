@@ -1,0 +1,238 @@
+<div class="bg-black py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Shop in style</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this shop item template</p>
+        </div>
+    </div>
+</div>
+<!-- Product section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center mb-5">
+            <div class="col-md-6 border text-center"><img class="card-img-full mb-5 mb-md-0" 
+              [src]='productDetails?.image' [alt]='productDetails?.title' /></div>
+            <div class="col-md-6">
+                <ul class="list-inline mb-2 text-sm">
+                  <li class="list-inline-item m-0"><i class="bi bi-star-fill small text-warning"></i></li>
+                  <li class="list-inline-item m-0"><i class="bi bi-star-fill small text-warning"></i></li>
+                  <li class="list-inline-item m-0"><i class="bi bi-star-fill small text-warning"></i></li>
+                  <li class="list-inline-item m-0"><i class="bi bi-star-half small text-warning"></i></li>
+                  <li class="list-inline-item m-0"><i class="bi bi-star small text-warning"></i></li>
+                </ul>
+                <h2>{{productDetails?.title}}</h2>
+                <p class="text-muted lead">{{productDetails?.price | currency:'EUR'}}</p>
+                <p class="text-sm mb-4">{{productDetails?.description}}</p>
+                <div class="row align-items-stretch mb-4">
+                  <div class="col-sm-5 pr-sm-0">
+                    <div class="border d-flex align-items-center justify-content-between py-1 px-3"><span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
+                        <div class="quantity">
+                            <button class="dec-btn p-0" (click)="minus()"><i class="bi bi-caret-left-fill"></i></button>
+                            <input class="form-control form-control-sm border-0 shadow-0 p-0" type="text" [(ngModel)]="inputnumber" />
+                            <button class="inc-btn p-0" (click)="plus()"><i class="bi bi-caret-right-fill"></i></button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" (click)="addItemToCart(productDetails)">Add to cart</a></div>
+                </div><a class="text-dark p-0 mb-4 d-inline-block" [routerLink]="'/home'"><i class="bi bi-heart me-2"></i>Add to wish list</a><br>
+                <ul class="list-unstyled small d-inline-block">
+                  <li class="px-3 py-2 mb-1 bg-light"><strong class="text-uppercase">COUNT:</strong><span class="ms-2 text-muted">{{productDetails?.rating?.count}}</span></li>
+                  <li class="px-3 py-2 mb-1 bg-light text-muted"><strong class="text-uppercase text-dark">Category:</strong><a class="reset-anchor ms-2" [routerLink]="'/home'">{{productDetails?.category}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- DETAILS TABS-->
+        <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+            <li class="nav-item"><a class="nav-link text-uppercase active" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase" id="reviews-tab" data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a></li>
+          </ul>
+          <div class="tab-content mb-5" id="myTabContent">
+            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+              <div class="p-4 p-lg-5 bg-light">
+                <h6 class="text-uppercase">Product description </h6>
+                <p class="text-muted text-sm mb-0">{{productDetails?.description}}</p>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+              <div class="p-4 p-lg-5 bg-light">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="d-flex mb-3">
+                      <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="" width="50" height="50"/></div>
+                      <div class="ms-3 flex-shrink-1">
+                        <h6 class="mb-0 text-uppercase">Jason Doe</h6>
+                        <p class="small text-muted mb-0 text-uppercase">20 May 2020</p>
+                        <ul class="list-inline mb-1 text-xs">
+                          <li class="list-inline-item m-0"><i class="bi bi-star-fill text-warning"></i></li>
+                          <li class="list-inline-item m-0"><i class="bi bi-star-fill text-warning"></i></li>
+                          <li class="list-inline-item m-0"><i class="bi bi-star-fill text-warning"></i></li>
+                          <li class="list-inline-item m-0"><i class="bi bi-star-fill text-warning"></i></li>
+                          <li class="list-inline-item m-0"><i class="bi bi-star-half text-warning"></i></li>
+                        </ul>
+                        <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="" width="50" height="50"/></div>
+                      <div class="ms-3 flex-shrink-1">
+                        <h6 class="mb-0 text-uppercase">Jane Doe</h6>
+                        <p class="small text-muted mb-0 text-uppercase">20 May 2020</p>
+                        <ul class="list-inline mb-1 text-xs">
+                          <li class="list-inline-item m-0"><i class="bi bi-star-fill text-warning"></i></li>
+                          <li class="list-inline-item m-0"><i class="bi bi-star-fill text-warning"></i></li>
+                          <li class="list-inline-item m-0"><i class="bi bi-star-fill text-warning"></i></li>
+                          <li class="list-inline-item m-0"><i class="bi bi-star-half text-warning"></i></li>
+                          <li class="list-inline-item m-0"><i class="bi bi-star text-warning"></i></li>
+                        </ul>
+                        <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
+<!-- Related items section-->
+<section class="py-5 bg-light">
+    <div class="container px-4 px-lg-5 mt-5">
+        <h2 class="fw-bolder mb-4">Related products</h2>
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">men's clothing</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Fancy Product</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                              <div class="bi-star-fill"></div>
+                              <div class="bi-star-fill"></div>
+                              <div class="bi-star-fill"></div>
+                              <div class="bi-star-fill"></div>
+                              <div class="bi-star"></div>
+                          </div>
+                            <!-- Product price-->
+                            €80.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                      <div class="d-flex justify-content-center">
+                        <a class="btn btn-outline-dark mt-auto" [routerLink]="'/home'"><i class="bi bi-heart"></i></a>
+                        <a class="btn btn-outline-dark mt-auto ms-2 me-2" [routerLink]="'/shop/cart'"><i class="bi bi-cart2"></i></a>
+                        <a class="btn btn-outline-dark mt-auto" [routerLink]="'/home'"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">men's clothing</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Special Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star"></div>
+                            </div>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">$20.00</span>
+                            €18.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                      <div class="d-flex justify-content-center">
+                        <a class="btn btn-outline-dark mt-auto" [routerLink]="'/home'"><i class="bi bi-heart"></i></a>
+                        <a class="btn btn-outline-dark mt-auto ms-2 me-2" [routerLink]="'/shop/cart'"><i class="bi bi-cart2"></i></a>
+                        <a class="btn btn-outline-dark mt-auto" [routerLink]="'/home'"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">men's clothing</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Sale Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                              <div class="bi-star-fill"></div>
+                              <div class="bi-star-fill"></div>
+                              <div class="bi-star-fill"></div>
+                              <div class="bi-star-fill"></div>
+                              <div class="bi-star"></div>
+                          </div>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">€50.00</span>
+                            €25.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                      <div class="d-flex justify-content-center">
+                        <a class="btn btn-outline-dark mt-auto" [routerLink]="'/home'"><i class="bi bi-heart"></i></a>
+                        <a class="btn btn-outline-dark mt-auto ms-2 me-2" [routerLink]="'/shop/cart'"><i class="bi bi-cart2"></i></a>
+                        <a class="btn btn-outline-dark mt-auto" [routerLink]="'/home'"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">men's clothing</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Popular Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star"></div>
+                            </div>
+                            <!-- Product price-->
+                            €40.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                      <div class="d-flex justify-content-center">
+                        <a class="btn btn-outline-dark mt-auto" [routerLink]="'/home'"><i class="bi bi-heart"></i></a>
+                        <a class="btn btn-outline-dark mt-auto ms-2 me-2" [routerLink]="'/shop/cart'"><i class="bi bi-cart2"></i></a>
+                        <a class="btn btn-outline-dark mt-auto" [routerLink]="'/home'"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

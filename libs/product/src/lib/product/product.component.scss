@@ -1,0 +1,60 @@
+.quantity {
+    display: flex;
+    align-items: center
+}
+
+.quantity input {
+    width: 2rem;
+    text-align: center
+}
+
+.quantity button {
+    background: none;
+    border: none;
+    width: 1rem;
+    outline: none
+}
+.nav-tabs {
+    border-bottom: 0 solid #dee2e6
+}
+
+.nav-tabs .nav-link {
+    margin-bottom: 0;
+    background: none;
+    border: 0 solid transparent;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+
+.nav-tabs .nav-link:hover,.nav-tabs .nav-link:focus {
+    border-color: #000;
+    isolation: isolate
+}
+
+.nav-tabs .nav-link.disabled {
+    color: #6c757d;
+    background-color: transparent;
+    border-color: transparent
+}
+
+.nav-tabs .nav-link.active,.nav-tabs .nav-item.show .nav-link {
+    color: #fff;
+    background-color: #000;
+    border-color: #000
+}
+
+.nav-tabs .dropdown-menu {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+.nav-tabs .nav-link {
+    background: #f8f9fa;
+    color: inherit;
+    padding: 0.75rem 1rem;
+}
+.card-img-full{
+    height: 400px;
+    object-fit: contain;
+    max-width: 100%;
+}

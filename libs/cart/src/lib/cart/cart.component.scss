@@ -1,0 +1,16 @@
+.quantity {
+    display: flex;
+    align-items: center
+}
+
+.quantity input {
+    width: 2rem;
+    text-align: center
+}
+
+.quantity button {
+    background: none;
+    border: none;
+    width: 1rem;
+    outline: none
+}

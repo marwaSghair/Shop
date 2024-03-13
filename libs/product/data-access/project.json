@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/product/data-access/src",
+  "prefix": "osf-front",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/product/data-access"],
+      "options": {
+        "jestConfig": "libs/product/data-access/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/product/data-access/**/*.ts",
+          "libs/product/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

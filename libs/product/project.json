@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/libs/product/src",
+  "prefix": "osf-front",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/libs/product"],
+      "options": {
+        "jestConfig": "libs/libs/product/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/libs/product/**/*.ts",
+          "libs/libs/product/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
